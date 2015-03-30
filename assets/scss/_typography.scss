@@ -1,0 +1,29 @@
+// -------------------------------------
+//   Typography
+// -------------------------------------
+// ----- Global typography classes
+// -------------------------------------
+
+body {
+	font-family: 'neutratext';
+}
+
+h1, h2, h3,
+h4, h5, h6
+button, input {
+	font-family: 'gothamBold';
+}
+
+
+
+h4, h5, h6 {
+	font-weight: lighter;
+}
+
+li, p, a {
+	font-family: 'neutratext';
+}
+
+a {
+	font-weight: bold;
+}

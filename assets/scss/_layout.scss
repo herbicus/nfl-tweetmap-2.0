@@ -1,0 +1,241 @@
+// -------------------------------------
+//   Layout
+// -------------------------------------
+// ----- Global layout classes (margin, padding, floats, etc).
+// -------------------------------------
+
+*,
+*:before,
+*:after  {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box; 
+}
+
+// SIMPLIFIED GRID
+
+.row { float: left; width: 100%; @include row(); }
+
+.whole { @include span-columns(12); }
+
+.half { @include span-columns(6); }
+
+.third { @include span-columns(4); }
+
+.fourth { @include span-columns(3); }
+
+.sixth { @include span-columns(2); }
+
+.one { @include span-columns(1); }
+
+.content-wrap {
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 15px;
+	@include row();
+	@include outer-container;
+	@include mq(iphone) {
+		max-width: 320px;
+	}
+	@include mq(android) {
+		max-width: 480px;
+	}
+	@include mq(tablet) {
+		max-width: 768px;
+	}
+	@include mq(laptop) {
+		max-width: 960px;
+	}
+	@include mq(desktop) {
+		max-width: 1280px;
+	}
+}
+
+// -------------------------------------
+// ----- Page Layout
+// -------------------------------------
+
+input {
+	@include button(small);
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	background: $cream;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+#map-canvas {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	
+  	@include media(max-width 480px, 6) {
+  		margin-top: 5em;
+  	} 	
+}
+#panel {
+	@include centerer;
+	top: 4.5%;
+	background: url("../img/shield.png");
+	@include bg-contain;
+	background-position: 10px 0; 
+	z-index: 5;
+	background-color: #fff;
+	padding: 10px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	border: 1px solid #999;
+	font-size: 1.75em;
+	height: 70px;
+	padding-left: 65px;
+	width: 100%;
+	max-width: 545px; 
+	
+	img {
+		position: absolute;
+		width: 100px;
+		left: -35%;
+		top: -45%;
+	}
+
+  	@include media(max-width 480px, 6) {
+  		top: 6.5%;
+  		
+  		form {
+  			opacity: 1;
+  		}
+  	} 	
+}
+
+select {
+	display: initial;
+}
+
+select, input {
+  font-size: 1.5em;
+}
+
+form {
+	font-family: gothamBold;
+		h3 {
+			font-size: 1.15em;
+			float: left;
+			
+			@include media(max-width 480px, 6) {
+				display: none;
+			} 	
+		}
+}
+
+#tweetBox{
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+	padding: 10px 20px;
+	overflow: scroll;
+	overflow-x: hidden;
+	font-size: 1em;
+	-webkit-box-shadow: 0 1px 10px 0 #000000;
+	z-index: 9999;
+	width: 30%;
+	float: left;
+	background: #FFF;
+	height: 80%;
+	position: absolute;
+	left: 2%;
+	bottom: 5%;
+	-webkit-border-radius: 2px;
+	      border-radius: 2px;
+	
+	// &:before {
+	// 	content: "CITY BUZZ";
+	// 	position: fixed;
+ //  	}
+
+  	hr {
+		float: left;
+		width: 100%;
+		height: 1px;
+		background: #000;
+  	}
+
+  	@include media(max-width 480px, 6) {
+  		@include row();
+  		@include outer-container;
+		margin: 1em 1%;
+		width: 94%;
+		height: 20%;
+		top: 50px;
+  	} 	
+}
+
+p {
+	width: 100%;
+}
+
+a {
+	color: $muteBlue;
+	width: 100%;
+	padding: 0;
+}
+
+#user {
+	color: #4099FF;
+}
+.profile {
+	float: right;
+	padding-left: 10px;
+}
+span {
+	float: right;
+}
+.user-wrap {
+	float: left;
+	width: 100%;
+
+	div {
+		float: right;
+		width: 100%;
+	}
+}
+
+input {
+	-webkit-font-smoothing: antialiased;
+	background-color: #477DCA;
+	border-radius: 0.1875em;
+	color: white;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1;
+	padding: .75em 1em;
+	text-decoration: none;
+	font-size: 0.5em;
+	border: 0;
+	@include fade-hover;
+}
+
+// iPad with portrait orientation.
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  body {
+    height: 1024px;
+  }
+}
+ 
+
+//iPad with landscape orientation.
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  body {
+    height: 768px;
+  }
+}
+
+

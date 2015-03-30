@@ -1,0 +1,59 @@
+// -------------------------------------
+//   styles.scss
+// -------------------------------------
+// ----- Contains an import section for libs, core, and modules, the inbox,
+// ----- and a shame section for quick fixes and hacks ----- //
+
+// -------------------------------------
+//   Libs
+// -------------------------------------
+
+// NORMALIZE
+@import "normalize";
+
+//@import "animate";
+
+// IMPORT BOURBON
+
+@import "bourbon/bourbon";
+@import "bitters/base";
+@import "neat/neat";
+
+// -------------------------------------
+//   Core
+// -------------------------------------
+
+// ----- Settings - @Font-Face Declarations, Variables ----- //
+@import "settings";
+
+// ----- Utilities - Extends, Functions, and Mixins ----- //
+@import "utilities";
+
+// ----- Base - Base-level tags (body, p, etc.) ----- //
+@import "base";
+
+// ----- Typography - Fonts and Colors ----- //
+@import "typography";
+
+// ----- Layout - Margin, Padding, Sizing ----- //
+@import "layout";
+
+// -------------------------------------
+//   Project Specific Partials
+// -------------------------------------
+
+// -------------------------------------
+//   Inbox
+// -------------------------------------
+// ----- The inbox allows developers, and those not actively working on the CSS,
+// to quickly add styles that are easily seen by the maintainer of the file.
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Shame
+// -------------------------------------
+// ----- Need to add a quick fix, hack, or questionable technique?
+// ----- Add it here, fix it later.
+// -------------------------------------

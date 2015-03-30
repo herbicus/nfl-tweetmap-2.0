@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CornerStone</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Herb Torres">
+        
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="icon" type="logo" href="assets/img/shield.png">
+        
+        <link rel="stylesheet" href="assets/css/styles.min.css">
+        <script src="assets/js/vendor/modernizr-2.8.0.min.js"></script>
+        
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="map-canvas"></div>
+            <div id="panel">
+              
+                <!-- <img src="assets/img/shield.png" alt="nfl"> -->
+
+                <form name="address">
+                    <h3>Pick Your Team</h3>
+                    <select name="result_type">
+                        <option value="san francisco">49'ers</option>
+                        <option value="chicago">Bears</option>
+                        <option value="cincinnati">Bengals</option>
+                        <option value="buffalo">Bills</option>
+                        <option value="denver">Broncos</option>
+                        <option value="cleveland">Browns</option>
+                        <option value="tampa bay">Buccaneers</option>
+                        <option value="arizona">Cardinals</option>
+                        <option value="san diego">Chargers</option>
+                        <option value="kansas city">Chiefs</option>
+                        <option value="indionapolis">Colts</option>
+                        <option value="dallas">Cowboys</option>
+                        <option value="miami">Dolphins</option>
+                        <option value="philadelphia">Eagles</option>
+                        <option value="antlanta">Falcons</option>
+                        <option value="new york">Giants</option>
+                        <option value="gainsville">Jaguars</option>
+                        <option value="new jersey">Jets</option>
+                        <option value="detroit">Lions</option>
+                        <option value="green bay">Packers</option>
+                        <option value="north carolina">Panthers</option>
+                        <option value="boston">Patriots</option>
+                        <option value="oakland">Raiders</option>
+                        <option value="st louis">Rams</option>
+                        <option value="baltimore">Ravens</option>
+                        <option value="washington">Redskins</option>
+                        <option value="new orleans">Saints</option>
+                        <option value="seattle">Seahawks</option>
+                        <option value="pitsburg">Steelers</option>
+                        <option value="houston">Texans</option>
+                        <option value="tennessee">Titans</option>
+                        <option value="minneonaolis">Vikings</option>
+                    </select>
+
+                    <input type="button" value="Team Buzz" name="Geocode">
+                </form>    
+            
+            </div>
+
+            <div id="tweetBox"></div>
+            
+            <div id="map-canvas"></div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <!--
+        <script src="assets/js/vendor/TweenMax.min.js"></script>
+        -->
+
+        <!-- uncomment if needed -->
+        <!-- <script src="assets/js/utilities.js"></script> -->
+        <!-- <script src="assets/js/data.js"></script> -->
+        
+        <!-- NO MINIFY - DEV & TEST -->
+        <script src="assets/js/main.js"></script>
+        <!-- <script src="assets/js/main.min.js"></script>
+        -->
+        <!-- REMOVE main.js/UNCOMMENT main.min.js FOR PRODUCTION -->
+
+        <!-- LIVERELOADING FOR GRUNT -->
+        <script src="//localhost:35729/livereload.js"></script>
+        <!-- REMOVE FOR PRODUCTION -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script> -->
+    </body>
+</html>

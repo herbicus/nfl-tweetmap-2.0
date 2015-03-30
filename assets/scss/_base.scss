@@ -1,0 +1,114 @@
+// -------------------------------------
+//   Base
+// -------------------------------------
+// ----- Global defaults for Base-level tags (body, p, etc.)
+// -------------------------------------
+
+// ----- Uncomment if project will be using rems ----- //
+// html {
+//   font-size: 62.5%;
+// }
+
+p {
+	color: $charcoal;
+}
+
+a {
+	color: $muteBlue;
+	text-decoration: none;
+	@include transition (all 0.3s ease-in-out);
+	&:hover {
+		cursor: pointer;
+		color: $deepRed;
+	}
+}
+
+// ANIMATED UNDERLINE HOVER - STATE
+
+// a {
+// 	display: inline-block;
+// 	padding: 15px 20px;
+// 	position: relative;
+// 	&:after {    
+// 		background: none repeat scroll 0 0 transparent;
+// 		bottom: 0;
+// 		content: "";
+// 		display: block;
+// 		height: 2px;
+// 		left: 50%;
+// 		position: absolute;
+// 		background: #fff;
+// 		@include transition(width 0.3s ease 0s, left 0.3s ease 0s);
+// 		width: 0;
+// 	}
+// 	&:hover:after { 
+// 		width: 100%; 
+// 		left: 0; 
+// 	}
+// }
+
+// END ANIMATED UNERLINE HOVER - STATE
+
+
+
+// ANIMATED HAMBURGER ICON TOGGLE BUTTON
+
+// .mobile-nav-btn {
+// 	position: absolute;
+// 	z-index: 9999; 
+// 	width: 60px;
+// 	height: 120px;
+// 	left: 90%;
+// 	top: -40%;
+// 	@include transition-duration(0.5s);
+
+// 	.icon {
+// 		@include transition-duration(0.5s);
+// 		position: absolute;
+// 		height: 4px;
+// 		width: 30px;
+// 		top: 60px;
+// 		background-color: #fff;
+
+// 		&:before {
+// 			@include transition-duration(0.5s);
+// 			position: absolute;
+// 			height: 4px;
+// 			width: 30px;
+// 			background-color: #fff;
+// 			content: "";
+// 			top: -10px;
+// 		}
+
+// 		&:after {
+// 			@include transition-duration(0.5s);
+// 			position: absolute;
+// 			height: 4px;
+// 			width: 30px;
+// 			background-color: #fff;
+// 			content: "";
+// 			top: 10px;
+// 		}
+
+// 		&:hover{
+// 		  cursor: pointer;
+// 		}
+// 	}
+
+// 	&.open {
+// 		.icon {
+// 			@include transition-duration(0.5s);
+// 			background: transparent;
+			
+// 			&:before {
+// 			  @include transform( rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px) );
+// 			}
+
+// 			&:after {
+// 			  @include transform( rotateZ(-45deg) scaleX(1.25) translate(6px, -6px) );
+// 			}
+// 		}				
+// 	}	
+// } 
+
+// END ANIMATED HAMBURGER TOGGLE BUTTON
